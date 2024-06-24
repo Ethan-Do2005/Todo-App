@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name = "viewport" content="width=device-width, initial-sclae=1.0" />
+        <title>Todo App</title>
+        <link rel="stylesheet" href = "./styles.css" />
+        <!--  link để truyền CSS vô HTML -->
+    </head>
+    <body>
+        <div class = "name-tag"> Ethan Do &gt;&lt;</div>
+        <div class="balloon left-balloon">
+            <img src="/img/left-balloon.jpg" alt="Left Balloon">
+        </div>
+        <div class="balloon right-balloon">
+            <img src="/img/right-balloon.jpg" alt="Right Balloon">
+        </div>
+
+
+        <div class="container">
+            <div class ="stats-container">
+                <div class="details">
+                    <h1>Todo App</h1>
+                    <p>Keep it up  ^^</p>
+                    <div id="progressBar">
+                        <div id = "progress"></div>
+                    </div>
+                </div>
+                <div class="stats-numbers">
+                    <p id="numbers">0 / 0</p>
+                </div>
+            </div>
+
+            <form>
+                <input type="text" id ="taskInput" placeholder="Write your task" />
+                <button id="newTask" type="submit">+</button>
+            </form>
+
+            <ul id="task-list"></ul>
+        </div>
+        <script src = "./app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    </body>
+</html>

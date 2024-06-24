@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*  : là cho các phần tử gốc và khai báo các biến CSS*/
+:root {
+    --background: #000430;
+    --secondaryBackground: #171c48;
+    --text: #fff;
+    --purple: #828dff;
+    --teal: #24feee;
+}
+body{
+    background-color: var(--background);
+    color: var(--text);     
+}
+
+.name-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-weight: bold; /* Làm cho chữ đậm */
+    font-size: 35px;
+    color: #4d8492; /* Màu chữ */
+    background-color: rgba(0, 0, 0, 0.315); /* Màu nền nửa trong suốt */
+    padding: 5px 10px; /* Khoảng cách bên trong phần tử */
+    border-radius: 5px;
+
+}
+/* cho các lớp phần tử có "lớp" = . */
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 120px auto 0 auto;
+    max-width: 500px;
+
+}
+/* cho các phần từ có "lớp" =.  stats-container */
+.stats-container {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--purple); /*Nét viền đậm nhạt cho khung của TodoApp*/
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+}
+.details {
+    width: 100%;
+}
+
+.balloon {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 0; /* Đảm bảo hình ảnh nằm dưới nội dung chính */
+}
+
+.left-balloon {
+    width: auto;
+    height: auto;
+    left: 15%;
+}
+
+.right-balloon {
+    width: auto;
+    height: auto;
+    right: 15%;
+}
+
+.left-balloon img, .right-balloon img {
+    max-width: 175px; /* Điều chỉnh kích thước bóng bay */
+}
+
+
+
+#progressBar{
+    width: 100%;
+    height: 10px;
+    background-color: var(--secondaryBackground);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#progress{
+    width: 0%;
+    height: 10px;
+    background-color:  var(--teal);
+    border-radius: 10px;
+    transition: all 0.3s ease ;
+}
+/* cho các phần tử có "ID" numbers và áp dụng kiểu dáng */
+#numbers{
+    width: 100px;
+    height: 100px;
+    background-color: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+}
+form {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+input{
+    flex: 1;
+    padding: 16px;
+    background: var(--secondaryBackground);
+    border: 1px solid var(--purple);
+    border-radius: 10px;
+    outline: none;
+    color: var(--text);
+}
+button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--purple);
+    color: var(--text);
+    font-size: 30px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+#task-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    width:100%
+    list-style none;
+}
+.taskItem{
+    width: 100%;
+    display: flex;
+    background-color: var(--secondaryBackground);
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.task input{
+    width: 20px;
+    height: 24px;
+
+}
+.completed p {
+    text-decoration: line-through;
+    color: var(--teal);
+}
+.taskItem img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px; 
+    cursor: pointer;
+}
