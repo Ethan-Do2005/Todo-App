@@ -85,8 +85,8 @@ const updateTasksList = () => {
                     <p>${task.text}</p>
                 </div>
                 <div class="icons"> 
-                    <img src="/img/edit.jpg" onClick="editTask(${index})" /> 
-                    <img src="/img/bin.avif" onClick="deleteTask(${index})"/>
+                    <img src="/Todo-App/img/edit.jpg" onClick="editTask(${index})" /> 
+                    <img src="/Todo-App/img/bin.avif" onClick="deleteTask(${index})"/>
                 </div>
         </div>
         `;
